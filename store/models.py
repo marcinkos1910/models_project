@@ -24,7 +24,8 @@ class Product(models.Model):
 
 
 class ProductImage(models.Model):
-    image = models.ImageField()
+    image = models.CharField(max_length=100)
+    # image = models.ImageField()
     product = models.ForeignKey('Product', on_delete=models.CASCADE, related_name='images')
 
     def __str__(self):

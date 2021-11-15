@@ -1,1 +1,7 @@
-<h1>Hello</h1>
+<ul>
+    {% for product in products %}
+
+    <li><a href="{% url 'store:product-detail' product.pk %}">{{ product }}</a></li>
+
+    {% endfor %}
+</ul>

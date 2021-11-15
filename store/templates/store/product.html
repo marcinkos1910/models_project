@@ -1,0 +1,9 @@
+{{ product }}
+{% for category in categories %}
+    <div>
+        {{ category }}
+    </div>
+{% endfor %}
+
+
+<a href="{% url 'store:store' %}">back</a>

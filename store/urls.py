@@ -5,6 +5,7 @@ from store import views, models
 
 app_name = 'store'
 urlpatterns = [
-    path('', views.StoreView.as_view(), name='store'),
-    path('product/<int:pk>/', DetailView.as_view(model=models.Product), name="product-detail"),
+    path('', views.product_list, name='store'),
+    # path('product/<int:pk>/', DetailView.as_view(model=models.Product), name="product-detail"),
+    path('product/<int:pk>/', views.product, name="product-detail"),
 ]
