@@ -323,3 +323,14 @@ Product.objects.order_by("name").reverse()[:3]
 
 # Issues
 - problem with Model.objects.reverse() -> needs be checked!
+
+# Commends
+ ## Pusta migracja
+ - python manage.py makemigrations store --empty
+ ## squashowanie migracji (podaj do której)
+ - python manage.py squashmigrations store 0002
+ ## dumpowanie danych do .json
+ - python manage.py dumpdata -o fixtures/fixtures.json
+ - mkdir fixtures
+ - python manage.py dumpdata -o fixtures/fixtures.json
+ - python manage.py loaddata -o fixtures/fixtures.json

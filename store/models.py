@@ -45,16 +45,17 @@ class Product(models.Model):
     # A list of constraints that you want to define on the model
 
 
-class DigitalProduct(Product):
-    file = models.FileField()
+# class DigitalProduct(Product):
+#     file = models.FileField()
 
-#
+
 # class PhysicalProduct(Product):
 #     stock_count = models.IntegerField(help_text="How many items are currently in stock.")
 
 
 class ProductImage(models.Model):
-    image = models.CharField(max_length=100)
+    # image = models.CharField(max_length=100)
+    image = models.TextField()
     # image = models.ImageField()
     product = models.ForeignKey('Product', on_delete=models.CASCADE, related_name='images')
 
